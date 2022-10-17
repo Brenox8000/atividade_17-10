@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+</head>
+<body>
+    <script>
+        temp_semana = []
+        for(let i = 0; i < 7 ; i++){
+            temp_semana.push(Number(prompt(`Digite a temperatura do ${i+1}º dia da semana: `)))
+        }
+
+        let menor = 0
+        let maior = 0
+
+        for(i in temp_semana){
+            if(temp_semana[i] >= maior){
+                maior = temp_semana [i]
+            }else if(temp_semana[i] <= menor){
+                menor = temp_semana [i]
+            }
+        }
+
+        alert(`Menor temperatura: ${menor}`)
+        alert(`Maior temperatura: ${maior}`)
+    </script>
+</body>
+</html>

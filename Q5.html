@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 05</title>
+</head>
+<body>
+    
+
+    <script>
+        const clientes = [];
+        do {
+            const nome = prompt('Informe o nome do cliente. Digite Fim para sair');
+            if (nome == "Fim") {
+                break
+            }
+            const idade = Number(prompt('Informe a idade do cliente.'));
+            clientes.push({nome, idade})
+        } while(true)
+        const preferencial = cliente => cliente.idade >= 60
+        const normal = cliente => cliente.idade <= 59
+        alert(`Clientes preferenciais: ${JSON.stringify(clientes.filter(preferencial), null, 4)}`);
+        alert(`Clientes preferenciais: ${JSON.stringify(clientes.filter(normal), null, 4)}`);
+    </script>
+</body>
+</html>

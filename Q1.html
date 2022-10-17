@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+
+    <script>
+        //let numero = Number(prompt(`insira o numero:${numero.toFixed(2)}`))
+        let alunos = []
+        let notas = []
+        let media_notas = 0
+
+        for(let i = 0; i < 5 ; i++){
+            alunos.push(prompt(`Digite o nome do aluno: `))
+            notas.push(Number(prompt(`Digite a nota do aluno: `)))
+        }
+
+        for(j in notas){
+            media_notas = media_notas + notas[j]
+            alert(`Aluno [${j}] = ${alunos[j]}`)
+            alert(`Nota [${j}] = ${notas[j]}`)
+        }   
+
+        media_notas = media_notas/5
+        alert(`Media das notas: ${media_notas}`)
+
+    </script>
+
+</body>
+</html>

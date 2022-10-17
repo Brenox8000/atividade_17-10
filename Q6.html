@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6</title>
+</head>
+<body>
+    <script>
+        let saques_validos = []
+        let saques_invalidos = []
+        let input = 0
+
+        while(true){
+            input = Number(prompt(`Digite o valor a ser sacado: `))
+            if(input == 0){
+                break
+            }
+
+            if(input%10 != 0){
+                alert(`Saque inválido`)
+                saques_invalidos.push(input)
+            }else{
+                alert(`Saque válido`)
+                saques_validos.push(input)
+            }
+        }
+
+        const soma_saque_validos = saques_validos.reduce(function (acumulador, atual) {
+        return acumulador + atual
+        })
+
+        alert(`Saques válidos: ${saques_validos}\nSoma dos saques válidos: ${soma_saque_validos}`)
+        alert(`Saques inválidos: ${saques_invalidos.length}`)
+
+    </script>
+</body>
+</html>

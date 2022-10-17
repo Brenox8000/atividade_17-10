@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 04</title>
+</head>
+
+<body>
+
+
+    <script>
+        const alunos = [];
+	var maiorNotaGeral = 6;
+        do {
+            const nome = prompt('Informe o nome do aluno. Digite Fim para sair');
+            if (nome == "Fim") {
+                break
+            }
+            const nota = Number(prompt('Informe a nota do aluno. Digite Fim para sair'));
+            alunos.push({ nome, nota })
+            if(nota > maiorNotaGeral){
+                maiorNotaGeral = nota
+            }
+        } while (true)
+        const maiorNota = aluno => aluno.nota >= 7
+        if (maiorNotaGeral >= 7) {
+		alert(`Maior nota da turma: ${maiorNotaGeral}`);
+            alert(`Alunos com nota acima de 7: ${JSON.stringify(alunos.filter(maiorNota), null, 4)}`);
+        } else {
+            alert("Não há alunos em destaque na turma")
+        }
+    </script>
+</body>
+
+</html>
